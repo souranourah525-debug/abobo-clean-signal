@@ -76,10 +76,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Signalez et suivez les problèmes d'assainissement à Abobo, Côte d'Ivoire." },
       { name: "author", content: "CleanCity" },
       { property: "og:title", content: "CleanCity · Plateforme citoyenne d'Abobo" },
-      { property: "og:description", content: "Signaler. Agir. Transformer notre ville." },
+      { property: "og:description", content: "Signalez et suivez les problèmes d'assainissement à Abobo, Côte d'Ivoire." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "CleanCity · Plateforme citoyenne d'Abobo" },
+      { name: "twitter:description", content: "Signalez et suivez les problèmes d'assainissement à Abobo, Côte d'Ivoire." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6132581a-a20b-4377-ac49-ef2cb47c4b31/id-preview-347d595e--23cbffbf-2c95-4c07-ac8f-deb4407e538e.lovable.app-1778768038574.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6132581a-a20b-4377-ac49-ef2cb47c4b31/id-preview-347d595e--23cbffbf-2c95-4c07-ac8f-deb4407e538e.lovable.app-1778768038574.png" },
     ],
     links: [
       {
