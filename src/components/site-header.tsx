@@ -21,7 +21,7 @@ export function SiteHeader() {
           </div>
           <div className="leading-tight">
             <div className="font-display text-lg font-extrabold text-navy">CleanCity</div>
-            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Abobo · Côte d'Ivoire</div>
+            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Rue Koné Tiémonan · Abobo</div>
           </div>
         </Link>
 
