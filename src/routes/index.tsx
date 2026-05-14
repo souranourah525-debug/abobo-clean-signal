@@ -1,26 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { HomePage } from "@/components/home-page";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "CleanCity · Signaler. Agir. Transformer Abobo." },
+      { name: "description", content: "Plateforme citoyenne GovTech pour signaler les problèmes d'assainissement à Abobo, Côte d'Ivoire." },
+      { property: "og:title", content: "CleanCity · Plateforme citoyenne d'Abobo" },
+      { property: "og:description", content: "Signalez, suivez et résolvez les problèmes d'assainissement urbain." },
+    ],
+  }),
+  component: HomePage,
 });
-
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
-}
