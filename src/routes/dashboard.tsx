@@ -8,27 +8,27 @@ export const Route = createFileRoute("/dashboard")({
   head: () => ({
     meta: [
       { title: "Tableau de bord administratif · CleanCity" },
-      { name: "description", content: "Vue d'ensemble des signalements, heatmap des zones critiques et suivi des interventions à Abobo." },
+      { name: "description", content: "Vue d'ensemble des signalements, points noirs et interventions sur la Rue Koné Tiémonan, Abobo." },
     ],
   }),
   component: DashboardPage,
 });
 
 const reports = [
-  { id: "C-2841", zone: "Avocatier", type: "Dépôt sauvage", status: "En intervention", time: "il y a 12 min", level: "alert" },
-  { id: "C-2840", zone: "Anonkoua-Kouté", type: "Égout bouché", status: "Reçu", time: "il y a 38 min", level: "neutral" },
-  { id: "C-2839", zone: "Sagbé", type: "Eaux stagnantes", status: "Vérifié", time: "il y a 1 h", level: "neutral" },
-  { id: "C-2838", zone: "PK 18", type: "Ordures", status: "Résolu", time: "il y a 2 h", level: "primary" },
-  { id: "C-2837", zone: "Banco Nord", type: "Voirie sale", status: "Résolu", time: "il y a 3 h", level: "primary" },
+  { id: "C-241", zone: "Tronçon 3 · n°142", type: "Dépôt sauvage", status: "En intervention", time: "il y a 12 min", level: "alert" },
+  { id: "C-240", zone: "Tronçon 5 · carrefour", type: "Égout bouché", status: "Reçu", time: "il y a 38 min", level: "neutral" },
+  { id: "C-239", zone: "Tronçon 2 · n°78", type: "Eaux stagnantes", status: "Vérifié", time: "il y a 1 h", level: "neutral" },
+  { id: "C-238", zone: "Tronçon 7 · n°210", type: "Ordures", status: "Résolu", time: "il y a 2 h", level: "primary" },
+  { id: "C-237", zone: "Tronçon 1 · entrée", type: "Voirie sale", status: "Résolu", time: "il y a 3 h", level: "primary" },
 ];
 
 const zones = [
-  { name: "Avocatier", reports: 84, level: 92 },
-  { name: "Sagbé", reports: 67, level: 78 },
-  { name: "Anonkoua-Kouté", reports: 54, level: 64 },
-  { name: "PK 18", reports: 41, level: 52 },
-  { name: "Banco Nord", reports: 33, level: 38 },
-  { name: "Abobo Té", reports: 22, level: 24 },
+  { name: "Tronçon 3 · marché", reports: 38, level: 92 },
+  { name: "Tronçon 5 · carrefour", reports: 27, level: 74 },
+  { name: "Tronçon 2 · école", reports: 19, level: 58 },
+  { name: "Tronçon 7 · station", reports: 14, level: 44 },
+  { name: "Tronçon 1 · entrée", reports: 9, level: 28 },
+  { name: "Tronçon 8 · sortie", reports: 5, level: 16 },
 ];
 
 function DashboardPage() {
@@ -40,7 +40,7 @@ function DashboardPage() {
         <div className="mx-auto flex max-w-7xl flex-wrap items-end justify-between gap-4 px-4 py-10 sm:px-6 lg:px-8">
           <div>
             <span className="text-xs font-semibold uppercase tracking-widest text-primary">Administration</span>
-            <h1 className="mt-2 font-display text-3xl font-extrabold text-navy md:text-4xl">Tableau de bord — Commune d'Abobo</h1>
+            <h1 className="mt-2 font-display text-3xl font-extrabold text-navy md:text-4xl">Tableau de bord — Rue Koné Tiémonan, Abobo</h1>
             <p className="mt-1 text-sm text-muted-foreground">Vue temps réel · Mise à jour il y a quelques secondes</p>
           </div>
           <div className="flex gap-2">
@@ -52,10 +52,10 @@ function DashboardPage() {
 
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="grid gap-4 md:grid-cols-4">
-          <KPI icon={<Activity className="h-5 w-5" />} value="12 487" label="Signalements totaux" delta="+ 184 aujourd'hui" />
-          <KPI icon={<CheckCircle2 className="h-5 w-5" />} value="8 942" label="Résolus" delta="71,6% taux résolution" accent="primary" />
-          <KPI icon={<Clock className="h-5 w-5" />} value="2,4 j" label="Délai moyen" delta="- 0,6j vs mois dernier" />
-          <KPI icon={<AlertTriangle className="h-5 w-5" />} value="34" label="Zones critiques" delta="6 sous surveillance" accent="alert" />
+          <KPI icon={<Activity className="h-5 w-5" />} value="412" label="Signalements totaux" delta="+ 7 aujourd'hui" />
+          <KPI icon={<CheckCircle2 className="h-5 w-5" />} value="298" label="Résolus" delta="72,3% taux résolution" accent="primary" />
+          <KPI icon={<Clock className="h-5 w-5" />} value="1,8 j" label="Délai moyen" delta="- 0,4j vs mois dernier" />
+          <KPI icon={<AlertTriangle className="h-5 w-5" />} value="3" label="Points noirs" delta="sur 8 tronçons" accent="alert" />
         </div>
 
         <div className="mt-8 grid gap-6 lg:grid-cols-3">
@@ -63,25 +63,25 @@ function DashboardPage() {
           <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-soft lg:col-span-2">
             <div className="flex items-center justify-between border-b border-border px-6 py-4">
               <div>
-                <h2 className="font-display text-lg font-bold text-navy">Heatmap des zones</h2>
-                <p className="text-xs text-muted-foreground">Concentration des signalements actifs</p>
+                <h2 className="font-display text-lg font-bold text-navy">Heatmap de la rue</h2>
+                <p className="text-xs text-muted-foreground">Concentration des signalements par tronçon</p>
               </div>
-              <span className="rounded-full bg-alert/15 px-2.5 py-1 text-xs font-semibold text-alert">6 zones critiques</span>
+              <span className="rounded-full bg-alert/15 px-2.5 py-1 text-xs font-semibold text-alert">3 points noirs</span>
             </div>
             <div className="relative">
-              <img src={mapImg} alt="Heatmap d'Abobo" className="h-[420px] w-full object-cover" loading="lazy" />
+              <img src={mapImg} alt="Heatmap Rue Koné Tiémonan" className="h-[420px] w-full object-cover" loading="lazy" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card/40 to-transparent" />
               <div className="absolute bottom-4 left-4 flex gap-2">
-                <span className="rounded-full bg-card/95 px-3 py-1 text-xs font-medium text-navy backdrop-blur"><MapPin className="mr-1 inline h-3 w-3" />12 quartiers</span>
-                <span className="rounded-full bg-card/95 px-3 py-1 text-xs font-medium text-navy backdrop-blur"><TrendingUp className="mr-1 inline h-3 w-3" />+18%</span>
+                <span className="rounded-full bg-card/95 px-3 py-1 text-xs font-medium text-navy backdrop-blur"><MapPin className="mr-1 inline h-3 w-3" />8 tronçons</span>
+                <span className="rounded-full bg-card/95 px-3 py-1 text-xs font-medium text-navy backdrop-blur"><TrendingUp className="mr-1 inline h-3 w-3" />+12%</span>
               </div>
             </div>
           </div>
 
           {/* Top zones */}
           <div className="rounded-3xl border border-border bg-card p-6 shadow-soft">
-            <h2 className="font-display text-lg font-bold text-navy">Quartiers les plus touchés</h2>
-            <p className="text-xs text-muted-foreground">Top 6 · 30 derniers jours</p>
+            <h2 className="font-display text-lg font-bold text-navy">Tronçons les plus touchés</h2>
+            <p className="text-xs text-muted-foreground">8 tronçons · 30 derniers jours</p>
             <ul className="mt-5 space-y-4">
               {zones.map((z) => (
                 <li key={z.name}>

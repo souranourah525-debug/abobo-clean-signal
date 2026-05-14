@@ -22,16 +22,16 @@ export function HomePage() {
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-12 lg:px-8 lg:py-36">
           <div className="lg:col-span-7">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-white backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-alert" /> GovTech · Commune d'Abobo
+              <span className="h-1.5 w-1.5 rounded-full bg-alert" /> GovTech · Rue Koné Tiémonan, Abobo
             </span>
             <h1 className="mt-6 font-display text-5xl font-extrabold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
               Signaler. Agir.{" "}
               <span className="block text-transparent" style={{ backgroundImage: "linear-gradient(90deg, #2E8B57, #F59E0B)", WebkitBackgroundClip: "text", backgroundClip: "text" }}>
-                Transformer notre ville.
+                Transformer notre rue.
               </span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/80">
-              La plateforme citoyenne qui connecte les habitants d'Abobo aux services municipaux pour un environnement urbain plus sain, plus propre et plus durable.
+              La plateforme citoyenne dédiée aux riverains de la Rue Koné Tiémonan à Abobo. Signalez les problèmes d'assainissement de la rue et suivez chaque intervention en temps réel.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
@@ -71,7 +71,7 @@ export function HomePage() {
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">Fonctionnalités</span>
           <h2 className="mt-3 font-display text-4xl font-bold text-navy md:text-5xl">Une plateforme conçue pour les citoyens.</h2>
           <p className="mt-4 text-muted-foreground">
-            Quelques secondes suffisent pour signaler un problème d'assainissement et contribuer à l'amélioration de votre quartier.
+            Quelques secondes suffisent pour signaler un problème d'assainissement sur la Rue Koné Tiémonan et contribuer à l'amélioration de votre voisinage.
           </p>
         </div>
 
@@ -88,13 +88,13 @@ export function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
           <div>
             <span className="text-xs font-semibold uppercase tracking-widest text-primary">Carte interactive</span>
-            <h2 className="mt-3 font-display text-4xl font-bold text-navy md:text-5xl">Visualisez l'état de la commune en temps réel.</h2>
+            <h2 className="mt-3 font-display text-4xl font-bold text-navy md:text-5xl">Visualisez l'état de la rue en temps réel.</h2>
             <p className="mt-4 text-muted-foreground">
-              Une cartographie dynamique des signalements, zones critiques et interventions en cours, mise à jour en continu par les agents municipaux et la communauté.
+              Une cartographie tronçon par tronçon de la Rue Koné Tiémonan : signalements actifs, points noirs et interventions en cours, mise à jour en continu.
             </p>
             <div className="mt-8 flex flex-wrap gap-6">
-              <Legend color="bg-primary" label="Zone propre" />
-              <Legend color="bg-alert" label="Zone critique" />
+              <Legend color="bg-primary" label="Tronçon propre" />
+              <Legend color="bg-alert" label="Point noir" />
               <Legend color="bg-navy" label="Intervention" />
             </div>
             <Link
@@ -105,9 +105,9 @@ export function HomePage() {
             </Link>
           </div>
           <div className="relative overflow-hidden rounded-3xl border border-border bg-card shadow-card">
-            <img src={mapImg} alt="Aperçu de la carte d'Abobo" className="h-full w-full object-cover" loading="lazy" />
+            <img src={mapImg} alt="Aperçu de la Rue Koné Tiémonan" className="h-full w-full object-cover" loading="lazy" />
             <div className="absolute left-4 top-4 rounded-full bg-card/90 px-3 py-1 text-xs font-medium text-navy backdrop-blur">
-              Abobo · 12 quartiers
+              Rue Koné Tiémonan · 8 tronçons
             </div>
           </div>
         </div>
@@ -125,15 +125,15 @@ export function HomePage() {
               Campagne 2026
             </span>
             <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">
-              Abobo Propre, c'est nous.
+              Koné Tiémonan Propre, c'est nous.
             </h2>
             <p className="mt-4 max-w-md text-navy-foreground/75">
-              Rejoignez le mouvement citoyen pour une commune débarrassée des dépôts sauvages. Chaque signalement compte. Chaque action transforme.
+              Rejoignez les riverains mobilisés pour une rue débarrassée des dépôts sauvages. Chaque signalement compte. Chaque action transforme.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-4">
-              <MiniStat icon={<Users className="h-4 w-4" />} value="24K" label="Citoyens" />
+              <MiniStat icon={<Users className="h-4 w-4" />} value="320" label="Riverains" />
               <MiniStat icon={<TrendingUp className="h-4 w-4" />} value="+62%" label="Engagement" />
-              <MiniStat icon={<MapPin className="h-4 w-4" />} value="12" label="Quartiers" />
+              <MiniStat icon={<MapPin className="h-4 w-4" />} value="8" label="Tronçons" />
             </div>
             <Link
               to="/report"
@@ -159,8 +159,8 @@ function HeroCard() {
           <span className="text-xs font-semibold uppercase tracking-widest">Signalement #C-2841</span>
           <span className="rounded-full bg-alert/90 px-2.5 py-0.5 text-[10px] font-bold text-alert-foreground">URGENT</span>
         </div>
-        <h3 className="mt-3 font-display text-2xl font-bold text-white">Dépôt sauvage · Avocatier</h3>
-        <p className="mt-1 text-sm text-white/70">Marché d'Avocatier, Abobo Sud · 250m</p>
+        <h3 className="mt-3 font-display text-2xl font-bold text-white">Dépôt sauvage · Tronçon 3</h3>
+        <p className="mt-1 text-sm text-white/70">Rue Koné Tiémonan, face au n°142 · 80m</p>
 
         <div className="mt-5 overflow-hidden rounded-xl border border-white/10">
           <div className="flex items-center justify-between bg-white/5 px-4 py-3 text-xs text-white/80">
