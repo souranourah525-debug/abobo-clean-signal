@@ -34,8 +34,8 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-navy-foreground/60 sm:flex-row sm:px-6 lg:px-8">
-          <span>© {new Date().getFullYear()} CleanCity · Initiative riveraine — Rue Koné Tiémonan, Abobo</span>
-          <span>Signaler. Agir. Transformer.</span>
+          <span>© {new Date().getFullYear()} CleanCity · Initiative riveraine — Rue Koné Tiémonan, Abobo Sogefiha</span>
+          <span>Ensemble, rendons notre cadre de vie meilleur.</span>
         </div>
       </div>
     </footer>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Camera, MapPin, ShieldCheck, Send, CheckCircle2 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { VoiceInput } from "@/components/voice-input";
 
 export const Route = createFileRoute("/report")({
   head: () => ({
@@ -29,6 +30,7 @@ function ReportPage() {
   const [anonymous, setAnonymous] = useState(true);
   const [photo, setPhoto] = useState<string | null>(null);
   const [coords, setCoords] = useState<string>("");
+  const [description, setDescription] = useState("");
 
   const locate = () => {
     if (!navigator.geolocation) return;
@@ -98,13 +100,17 @@ function ReportPage() {
               </div>
             </div>
 
+            <VoiceInput value={description} onChange={setDescription} />
+
             <div>
               <label htmlFor="desc" className="text-sm font-semibold text-navy">Description</label>
               <textarea
                 id="desc"
                 required
                 rows={4}
-                placeholder="Décrivez ce que vous observez..."
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                placeholder="Décrivez ce que vous observez... (ou utilisez la saisie vocale ci-dessus)"
                 className="mt-2 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
               />
             </div>
