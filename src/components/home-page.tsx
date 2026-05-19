@@ -125,7 +125,7 @@ export function HomePage() {
               Campagne 2026
             </span>
             <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">
-              Notre rue propre, notre cadre de vie.
+              Notre rue propre, notre cadre de vie soigné.
             </h2>
             <p className="mt-4 max-w-md text-navy-foreground/75">
               Rejoignez les riverains mobilisés pour une rue débarrassée des dépôts sauvages. Chaque signalement compte. Chaque action transforme.
