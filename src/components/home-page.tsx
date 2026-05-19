@@ -22,7 +22,7 @@ export function HomePage() {
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-12 lg:px-8 lg:py-36">
           <div className="lg:col-span-7">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-white backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-alert" /> GovTech · Rue Koné Tiémonan, Abobo
+              <span className="h-1.5 w-1.5 rounded-full bg-alert" /> GovTech · Rue Koné Tiémoman, Abobo
             </span>
             <h1 className="mt-6 font-display text-5xl font-extrabold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
               Signaler. Agir.{" "}
@@ -31,7 +31,7 @@ export function HomePage() {
               </span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/80">
-              La plateforme citoyenne dédiée aux riverains de la Rue Koné Tiémonan à Abobo. Signalez les problèmes d'assainissement de la rue et suivez chaque intervention en temps réel.
+              La plateforme citoyenne dédiée aux riverains de la Rue Koné Tiémoman à Abobo. Signalez les problèmes d'assainissement de la rue et suivez chaque intervention en temps réel.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
@@ -71,7 +71,7 @@ export function HomePage() {
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">Fonctionnalités</span>
           <h2 className="mt-3 font-display text-4xl font-bold text-navy md:text-5xl">Une plateforme conçue pour les citoyens.</h2>
           <p className="mt-4 text-muted-foreground">
-            Quelques secondes suffisent pour signaler un problème d'assainissement sur la Rue Koné Tiémonan et contribuer à l'amélioration de votre voisinage.
+            Quelques secondes suffisent pour signaler un problème d'assainissement sur la Rue Koné Tiémoman et contribuer à l'amélioration de votre voisinage.
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export function HomePage() {
             <span className="text-xs font-semibold uppercase tracking-widest text-primary">Carte interactive</span>
             <h2 className="mt-3 font-display text-4xl font-bold text-navy md:text-5xl">Visualisez l'état de la rue en temps réel.</h2>
             <p className="mt-4 text-muted-foreground">
-              Une cartographie tronçon par tronçon de la Rue Koné Tiémonan : signalements actifs, points noirs et interventions en cours, mise à jour en continu.
+              Une cartographie tronçon par tronçon de la Rue Koné Tiémoman : signalements actifs, points noirs et interventions en cours, mise à jour en continu.
             </p>
             <div className="mt-8 flex flex-wrap gap-6">
               <Legend color="bg-primary" label="Tronçon propre" />
@@ -105,9 +105,9 @@ export function HomePage() {
             </Link>
           </div>
           <div className="relative overflow-hidden rounded-3xl border border-border bg-card shadow-card">
-            <img src={mapImg} alt="Aperçu de la Rue Koné Tiémonan" className="h-full w-full object-cover" loading="lazy" />
+            <img src={mapImg} alt="Aperçu de la Rue Koné Tiémoman" className="h-full w-full object-cover" loading="lazy" />
             <div className="absolute left-4 top-4 rounded-full bg-card/90 px-3 py-1 text-xs font-medium text-navy backdrop-blur">
-              Rue Koné Tiémonan · 8 tronçons
+              Rue Koné Tiémoman · 8 tronçons
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@ export function HomePage() {
               Campagne 2026
             </span>
             <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">
-              Notre rue propre, notre cadre de vie.
+              Notre rue propre, notre cadre de vie soigné.
             </h2>
             <p className="mt-4 max-w-md text-navy-foreground/75">
               Rejoignez les riverains mobilisés pour une rue débarrassée des dépôts sauvages. Chaque signalement compte. Chaque action transforme.
@@ -160,7 +160,7 @@ function HeroCard() {
           <span className="rounded-full bg-alert/90 px-2.5 py-0.5 text-[10px] font-bold text-alert-foreground">URGENT</span>
         </div>
         <h3 className="mt-3 font-display text-2xl font-bold text-white">Dépôt sauvage · Tronçon 3</h3>
-        <p className="mt-1 text-sm text-white/70">Rue Koné Tiémonan, face au n°142 · 80m</p>
+        <p className="mt-1 text-sm text-white/70">Rue Koné Tiémoman, face au n°142 · 80m</p>
 
         <div className="mt-5 overflow-hidden rounded-xl border border-white/10">
           <div className="flex items-center justify-between bg-white/5 px-4 py-3 text-xs text-white/80">
