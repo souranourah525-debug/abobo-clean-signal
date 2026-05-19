@@ -13,11 +13,11 @@ export function HomePage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-hero-gradient" />
-        <div className="absolute inset-0 opacity-25">
+        <div className="absolute inset-0 bg-navy" />
+        <div className="absolute inset-0 opacity-70">
           <img src={heroImg} alt="Abobo" className="h-full w-full object-cover" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/20" />
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-12 lg:px-8 lg:py-36">
           <div className="lg:col-span-7">
