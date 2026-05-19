@@ -12,7 +12,7 @@ export function SiteFooter() {
             <span className="font-display text-xl font-extrabold">CleanCity</span>
           </div>
           <p className="mt-4 max-w-md text-sm text-navy-foreground/70">
-            Plateforme citoyenne dédiée aux riverains de la Rue Koné Tiémonan à Abobo. Ensemble, transformons notre rue.
+            Plateforme citoyenne dédiée aux riverains de la Rue Koné Tiémoman à Abobo. Ensemble, transformons notre rue.
           </p>
         </div>
         <div>
@@ -34,7 +34,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-navy-foreground/60 sm:flex-row sm:px-6 lg:px-8">
-          <span>© {new Date().getFullYear()} CleanCity · Initiative riveraine — Rue Koné Tiémonan, Abobo Sogefiha</span>
+          <span>© {new Date().getFullYear()} CleanCity · Initiative riveraine — Rue Koné Tiémoman, Abobo Sogefiha</span>
           <span>Ensemble, rendons notre cadre de vie meilleur.</span>
         </div>
       </div>

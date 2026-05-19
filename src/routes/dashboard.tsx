@@ -8,7 +8,7 @@ export const Route = createFileRoute("/dashboard")({
   head: () => ({
     meta: [
       { title: "Tableau de bord administratif · CleanCity" },
-      { name: "description", content: "Vue d'ensemble des signalements, points noirs et interventions sur la Rue Koné Tiémonan, Abobo." },
+      { name: "description", content: "Vue d'ensemble des signalements, points noirs et interventions sur la Rue Koné Tiémoman, Abobo." },
     ],
   }),
   component: DashboardPage,
@@ -40,7 +40,7 @@ function DashboardPage() {
         <div className="mx-auto flex max-w-7xl flex-wrap items-end justify-between gap-4 px-4 py-10 sm:px-6 lg:px-8">
           <div>
             <span className="text-xs font-semibold uppercase tracking-widest text-primary">Administration</span>
-            <h1 className="mt-2 font-display text-3xl font-extrabold text-navy md:text-4xl">Tableau de bord — Rue Koné Tiémonan, Abobo</h1>
+            <h1 className="mt-2 font-display text-3xl font-extrabold text-navy md:text-4xl">Tableau de bord — Rue Koné Tiémoman, Abobo</h1>
             <p className="mt-1 text-sm text-muted-foreground">Vue temps réel · Mise à jour il y a quelques secondes</p>
           </div>
           <div className="flex gap-2">
@@ -69,7 +69,7 @@ function DashboardPage() {
               <span className="rounded-full bg-alert/15 px-2.5 py-1 text-xs font-semibold text-alert">3 points noirs</span>
             </div>
             <div className="relative">
-              <img src={mapImg} alt="Heatmap Rue Koné Tiémonan" className="h-[420px] w-full object-cover" loading="lazy" />
+              <img src={mapImg} alt="Heatmap Rue Koné Tiémoman" className="h-[420px] w-full object-cover" loading="lazy" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card/40 to-transparent" />
               <div className="absolute bottom-4 left-4 flex gap-2">
                 <span className="rounded-full bg-card/95 px-3 py-1 text-xs font-medium text-navy backdrop-blur"><MapPin className="mr-1 inline h-3 w-3" />8 tronçons</span>
