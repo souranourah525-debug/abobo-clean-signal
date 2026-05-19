@@ -30,6 +30,7 @@ function ReportPage() {
   const [anonymous, setAnonymous] = useState(true);
   const [photo, setPhoto] = useState<string | null>(null);
   const [coords, setCoords] = useState<string>("");
+  const [description, setDescription] = useState("");
 
   const locate = () => {
     if (!navigator.geolocation) return;
