@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Camera, MapPin, ShieldCheck, Send, CheckCircle2 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { VoiceInput } from "@/components/voice-input";
 
 export const Route = createFileRoute("/report")({
   head: () => ({
